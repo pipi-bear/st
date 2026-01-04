@@ -11,6 +11,7 @@ which includes patches:
 
 # Patches that I added
 
+- clickurl
 - copyurl
 - desktopentry
 
