@@ -213,6 +213,8 @@ static Shortcut shortcuts[] = {
 	{ MODKEY,               XK_a,           chgalpha,       {.f = -1} },
 	{ MODKEY,               XK_s,           chgalpha,       {.f = +1} },
 	{ MODKEY,               XK_d,           chgalpha,       {.f =  0} },
+    { MODKEY,               XK_l,           copyurl,        {.i =  0} },
+	{ MODKEY|ShiftMask,     XK_L,           copyurl,        {.i =  1} },
 };
 
 /*
