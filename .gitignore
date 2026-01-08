@@ -6,5 +6,6 @@ patches/
 *.o
 
 st
+st.desktop
 
 
