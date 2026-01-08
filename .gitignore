@@ -1,0 +1,10 @@
+patches/
+.vscode/
+
+*.rej
+*.orig
+*.o
+
+st
+
+

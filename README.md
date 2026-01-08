@@ -1,3 +1,37 @@
+# My st config (based on BreadOnPenguins/st)
+
+This repo contains my personal st configuration.
+
+Based on:
+[BreadOnPenguins/st](https://github.com/BreadOnPenguins/st)
+
+## Changes
+
+### Additional patches
+
+- clickurl (`st-clickurl-0.8.5.diff`)
+- copyurl (`st-copyurl-multiline-20230406-211964d.diff`)
+- desktopentry (`st-desktopentry-0.8.5.diff`)
+
+### Scope and notes
+
+The adjustments in this repository are made **only for this forked setup** and are intended to resolve issues caused by the specific patch combination used here.
+
+Note:
+- The version from the official suckless repo does NOT have these issues.
+
+Detailed description about my fix is as the following subsection.
+
+### Fixes
+
+The patch "copyurl" would cause error when applying the `.diff` file to the forked version, due to:
+
+- the member `line` is no longer in the `Term` structure from the forked version
+
+A vanilla st cloned from the official suckless repo (`st 0.9.2`) is tested with `st-copyurl-multiline-20230406-211964d.diff`, and it works fine.
+
+---
+# Original README below
 ## simple terminal
 My very simple fork of st, comes with no guarantees or warranties <sub>(to be clear: this means things may not work as expected, or at all)</sub> :^)
 
