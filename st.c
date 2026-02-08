@@ -1189,7 +1189,7 @@ treset(void)
 	for (i = 0; i < 2; i++) {
 		term.screen[i].sc = (TCursor){{
 			.fg = defaultfg,
-			.bg = defaultbg
+			.bg = defaultbg,
 			.decor = DECOR_DEFAULT_COLOR
 		}};
 		term.screen[i].cur = 0;

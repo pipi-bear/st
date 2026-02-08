@@ -12,6 +12,7 @@ Based on:
 - clickurl (`st-clickurl-0.8.5.diff`)
 - copyurl (`st-copyurl-multiline-20230406-211964d.diff`)
 - desktopentry (`st-desktopentry-0.8.5.diff`)
+- kitty-graphics (`st-kitty-graphics-20251230-0.9.3.diff`)
 
 ### Scope and notes
 
@@ -24,7 +25,7 @@ Detailed description about my fix is as the following subsection.
 
 ### Fixes
 
-The patch "copyurl" would cause error when applying the `.diff` file to the forked version, due to:
+Both the patch "copyurl" and "kitty-graphics" cause error when applying the `.diff` file to the forked version, due to:
 
 - the member `line` is no longer in the `Term` structure from the forked version
 
@@ -33,7 +34,7 @@ A vanilla st cloned from the official suckless repo (`st 0.9.2`) is tested with 
 ---
 # Original README below
 ## simple terminal
-My very simple fork of st, comes with no guarantees or warranties <sub>(to be clear: this means things may not work as expected, or at all)</sub> :^)
+  My very simple fork of st, comes with no guarantees or warranties <sub>(to be clear: this means things may not work as expected, or at all)</sub> :^)
 
 ## patches added
 * alpha & changealpha (transparency)
