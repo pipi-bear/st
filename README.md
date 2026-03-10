@@ -7,6 +7,17 @@ Based on:
 
 ## Changes
 
+### Keybindings
+
+Originally, keybinds ```alt + shift + k``` & ```alt + shift + j``` are mapped to increase and decrease font size, respectively, this is modified to:
+```ctrl + shift + k``` & ```ctrl + shift + j``` by setting: 
+
+```#define TERMMOD (ControlMask|ShiftMask)```
+
+in **config.h**.
+
+Change this to modify related keybindings if needed.
+
 ### Additional patches
 
 - clickurl (`st-clickurl-0.8.5.diff`)
@@ -32,6 +43,7 @@ Both the patch "copyurl" and "kitty-graphics" cause error when applying the `.di
 A vanilla st cloned from the official suckless repo (`st 0.9.2`) is tested with `st-copyurl-multiline-20230406-211964d.diff`, and it works fine.
 
 ---
+
 # Original README below
 ## simple terminal
   My very simple fork of st, comes with no guarantees or warranties <sub>(to be clear: this means things may not work as expected, or at all)</sub> :^)
