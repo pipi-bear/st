@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "mono:pixelsize=20:antialias=true:autohint=true";
+static char *font = "Hack:pixelsize=20:antialias=true:autohint=true";
 static int borderpx = 2;
 
 /* How to align the content in the window when the size of the terminal
