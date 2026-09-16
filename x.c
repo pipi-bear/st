@@ -1689,9 +1689,15 @@ xdrawglyphfontspecs(const XftGlyphFontSpec *specs, Glyph base, int len, int x, i
 	}
 
 	if ((base.mode & ATTR_BOLD_FAINT) == ATTR_FAINT) {
-		colfg.red = fg->color.red / 2;
-		colfg.green = fg->color.green / 2;
-		colfg.blue = fg->color.blue / 2;
+		/* Blend halfway towards the background rather than towards
+		 * black. Halving the components only dims the text when the
+		 * background is dark; on a light background it raises the
+		 * contrast instead, making faint text look bolder than normal
+		 * text. With a black background this reduces to the original
+		 * fg/2, so dark colour schemes are unaffected. */
+		colfg.red = (fg->color.red + bg->color.red) / 2;
+		colfg.green = (fg->color.green + bg->color.green) / 2;
+		colfg.blue = (fg->color.blue + bg->color.blue) / 2;
 		colfg.alpha = fg->color.alpha;
 		XftColorAllocValue(xw.dpy, xw.vis, xw.cmap, &colfg, &revfg);
 		fg = &revfg;
